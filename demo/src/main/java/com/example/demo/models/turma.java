@@ -12,41 +12,41 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "turma")
 public class turma {
-    @Id
-    @GeneratedValue
-    @Column(name= "id")
-    private Integer id; 
+@Id
+@GeneratedValue
+@Column(name= "id")
+private Integer id; 
 
-    @Column(name = "nome")
-    private String nome;
-    
-    @Column(name = "aluno")
-    private List<aluno> aluno;
+@Column(name = "nome")
+private String nome;
 
-    public turma() {
-    }
+@Column(name = "aluno")
+private List<aluno> aluno;
 
-    public turma(Integer id, String nome, List<com.example.demo.models.aluno> aluno) {
-        this.id = id;
-        this.nome = nome;
-        this.aluno = aluno;
-    }
+public turma() {
+}
 
-    public Integer getId() {
-        return id;
-    }
+public turma(Integer id, String nome, List<com.example.demo.models.aluno> aluno) {
+    this.id = id;
+    this.nome = nome;
+    this.aluno = aluno;
+}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+public Integer getId() {
+    return id;
+}
 
-    public String getNome() {
-        return nome;
-    }
+public void setId(Integer id) {
+    this.id = id;
+}
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+public String getNome() {
+    return nome;
+}
+
+public void setNome(String nome) {
+    this.nome = nome;
+}
 
     public List<aluno> getAluno() {
         return aluno;
