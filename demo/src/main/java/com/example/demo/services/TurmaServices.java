@@ -14,10 +14,9 @@ public class TurmaServices {
   @Autowired
   private TurmaRepository turmaRepository;
 
-  public Long contarTurma() {
-   
-    return turmaRepository.count();
-  }
+   public Long contarAlunos(){
+       return turmaRepository.count();
+    } 
 
   public turma buscarTurma(Integer id) {
     return turmaRepository.findById(id).get();
@@ -31,12 +30,10 @@ public class TurmaServices {
   public Boolean deletarPauta(Integer id) {
     if (turmaRepository.existsById(id)) {
       turmaRepository.deleteById(id);
+      return true;
     }
-    return true;
-  }
     return false;
-
-  
+    }
 
   public turma cadastrarturma(turma turma) {
     return turmaRepository.save(turma);
@@ -57,5 +54,3 @@ public class TurmaServices {
   }
 
 }
-
-
