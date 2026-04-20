@@ -17,7 +17,7 @@ public class AlunoService {
        return alunoRepository.count();
 
     } 
-    
+     
     public aluno buscarAluno(Integer id) {
         return alunoRepository.findById(id).get();
 
